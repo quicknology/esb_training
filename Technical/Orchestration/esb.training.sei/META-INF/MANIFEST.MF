@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Export-Package: org.talend.service;uses:="javax.xml.ws,javax.xml.names
+ pace,javax.jws.soap,javax.jws,javax.xml.bind.annotation";version="1.0
+ .0.SNAPSHOT"
+Built-By: Administrator
+Tool: Bnd-1.15.0
+Bundle-Name: esb.training.sei
+Created-By: Apache Maven Bundle Plugin
+Require-Bundle: org.apache.cxf.bundle
+Build-Jdk: 1.7.0_45
+Bundle-Version: 1.0.0
+Bnd-LastModified: 1393515933556
+Bundle-ManifestVersion: 2
+Import-Package: META-INF.cxf,META-INF.cxf.camel,META-INF.cxf.osgi,java
+ x.jws,javax.jws.soap,javax.xml.bind.annotation,javax.xml.namespace,ja
+ vax.xml.ws
+Bundle-SymbolicName: esb.training.sei
+

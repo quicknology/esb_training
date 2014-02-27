@@ -1,0 +1,8 @@
+<tns:Order xmlns:tns="http://www.talend.org/order">
+		<OrderId>ORDER-23234JJKHKJ</OrderId>
+		<OrderDescription>Macbook Air</OrderDescription>
+		<OrderDate>2011-12-25</OrderDate>
+		<OrderAmount>1300</OrderAmount>
+		<OrderCountry>FR</OrderCountry>
+		<OrderCurrency>EURO</OrderCurrency>
+	</tns:Order>

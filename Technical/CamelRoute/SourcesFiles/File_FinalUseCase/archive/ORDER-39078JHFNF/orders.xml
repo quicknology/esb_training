@@ -1,0 +1,8 @@
+<tns:Order xmlns:tns="http://www.talend.org/order">
+		<OrderId>ORDER-39078JHFNF</OrderId>
+		<OrderDescription>iPhone 4S 32Go</OrderDescription>
+		<OrderDate>2011-12-27</OrderDate>
+		<OrderAmount>900</OrderAmount>
+		<OrderCountry>US</OrderCountry>
+		<OrderCurrency>USD</OrderCurrency>
+	</tns:Order>

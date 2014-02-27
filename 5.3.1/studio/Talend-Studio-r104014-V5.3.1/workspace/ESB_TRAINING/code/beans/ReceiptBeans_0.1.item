@@ -1,0 +1,33 @@
+package beans;
+
+import org.apache.camel.Exchange;
+import org.apache.camel.Header;
+
+public class ReceiptBeans {
+
+	/**
+	 * * {talendTypes} Exchange * * {Category} User Beans * * {param}
+	 * exchange("exch") input: The camel exchange. * * {example}
+	 * initReceipt(Exchange exch) # !.
+	 */
+	public static void initReceipt(Exchange exch) {
+		exch.getIn()
+				.setBody(
+						"Name and Phone # of Delivery Agent (Typed or Stamped)\nJane Doe’s Agency 123 Fifth Avenue \nBrooklyn, NY 11209(718)748-5252\nDelivery Agency Code #18/ 123");
+	}
+
+	/**
+	 * * {talendTypes} void * {Category} User Beans * {param} exchange("exch")
+	 * input: The camel exchange. * {param} string("country") input: The country
+	 * from exchange Header to be added into body. * {param} string("price")
+	 * input: The price from exchange Header to be added into body. * {example}
+	 * setPrice(Exchange exch, @Header("Price") String price, @Header("Country")
+	 * String country)
+	 */
+	public static void setPrice(Exchange exch, @Header("Price") String price,
+			@Header("Country") String country) {
+		exch.getIn().setBody(
+				exch.getIn().getBody(String.class) + "\nCountry: " + country
+						+ "\nAmount: " + price, String.class);
+		System.out.println("$$ For country: "+country+" setting price:"+price+"\n\n"  );	}
+}

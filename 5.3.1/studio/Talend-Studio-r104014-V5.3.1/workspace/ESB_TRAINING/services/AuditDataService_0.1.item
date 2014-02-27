@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:Services="http://www.talend.org/Services">
+  <Services:ServiceConnection xmi:id="_34rQsZ8wEeO5Ed52bvKQKA" servicePort="_JQel0J84EeO5Ed52bvKQKA">
+    <additionalInfo xmi:id="_miYpUJ_rEeOHvPg5PsenBw" key="groupId" value="org.talend.training"/>
+    <additionalInfo xmi:id="_miYpUZ_rEeOHvPg5PsenBw" key="artifactId" value="AuditDataService"/>
+    <additionalInfo xmi:id="_miYpUp_rEeOHvPg5PsenBw" key="version" value="0.1.0"/>
+    <additionalInfo xmi:id="_sxncoJ_0EeOHvPg5PsenBw" key="UseSAM" value="true"/>
+    <additionalInfo xmi:id="_sxncoZ_0EeOHvPg5PsenBw" key="UseSL" value="false"/>
+    <additionalInfo xmi:id="_sxncop_0EeOHvPg5PsenBw" key="Security.Basic" value="false"/>
+    <additionalInfo xmi:id="_sxnco5_0EeOHvPg5PsenBw" key="Security.SAML" value="false"/>
+    <additionalInfo xmi:id="_sxncpJ_0EeOHvPg5PsenBw" key="Authorization" value="false"/>
+    <additionalInfo xmi:id="_sxncpZ_0EeOHvPg5PsenBw" key="UseServiceRegisrty" value="false"/>
+    <additionalInfo xmi:id="_sxncpp_0EeOHvPg5PsenBw" key="LogMessages" value="false"/>
+  </Services:ServiceConnection>
+  <Services:ServicePort xmi:id="_JQel0J84EeO5Ed52bvKQKA" name="AuditDataServicePortType" id="_34-LoJ8wEeO5Ed52bvKQKA" serviceOperation="_JQel0Z84EeO5Ed52bvKQKA"/>
+  <Services:ServiceOperation xmi:id="_JQel0Z84EeO5Ed52bvKQKA" label="Audit-AuditDataServicePortType_AuditDataServiceOperation" name="Audit" id="_IbNxwJ84EeO5Ed52bvKQKA" referenceJobId="_dz0q4J80EeO5Ed52bvKQKA"/>
+</xmi:XMI>

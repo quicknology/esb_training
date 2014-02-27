@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="LookupDataService"
+		xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:tns="http://www.talend.org/service/"
+		targetNamespace="http://www.talend.org/service/">
+
+	<wsdl:types>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.talend.org/service/">
+			<xsd:element name="LookupDataServiceOperationRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="ProductId" type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="LookupDataServiceOperationResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="out" type="tns:ProductType"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		
+			<xsd:complexType name="ProductType">
+				<xsd:sequence>
+					<xsd:element name="Name" type="xsd:string"></xsd:element>
+					<xsd:element name="Description" type="xsd:string"></xsd:element>
+					<xsd:element name="Price" type="xsd:float"></xsd:element>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="LookupDataServiceOperationRequest">
+		<wsdl:part name="parameters" element="tns:LookupDataServiceOperationRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="LookupDataServiceOperationResponse">
+		<wsdl:part name="parameters" element="tns:LookupDataServiceOperationResponse"></wsdl:part>
+	</wsdl:message>
+
+	<wsdl:portType name="LookupDataServicePortType">
+		<wsdl:operation name="LookupDataServiceOperation">
+			<wsdl:input message="tns:LookupDataServiceOperationRequest"></wsdl:input>
+			<wsdl:output message="tns:LookupDataServiceOperationResponse"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="LookupDataServiceBinding" type="tns:LookupDataServicePortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="LookupDataServiceOperation">
+			<soap:operation soapAction="http://www.talend.org/service/LookupDataServiceOperation" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="LookupDataService">
+		<wsdl:port name="LookupDataServicePort" binding="tns:LookupDataServiceBinding">
+			<soap:address location="http://localhost:8091/services/LookupDataService" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

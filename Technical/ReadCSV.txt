@@ -1,0 +1,27 @@
+package beans;
+
+import org.apache.camel.Exchange;
+
+public class ReadCSV {
+	/**
+	 * * getDiscount: return the RoutingSlip endpoints list * according to the
+	 * discount column value get from delimited file. * * {talendTypes} String *
+	 * * {Category} User Beans * * {param} exchange("exch") input: The exchange
+	 * in message. * * {example} getDiscount("exchange") #
+	 * "direct:billing,direct:discount,direct:receipt".
+	 */
+	public static String getDiscount(Exchange exch) {
+		if (exch.getIn().getBody() != null) {
+			java.util.Map data = exch.getIn().getBody(java.util.Map.class);
+			if (data != null) {
+				String discount = (String) (data.get("Discount"));
+				System.out.println("Discount :" + discount);
+				if (!"0.0".equals(discount)) {
+					return "direct:billing,direct:discount,direct:receipt";
+				} else
+					return "direct:billing,direct:receipt";
+			}
+		}
+		return null;
+	}
+}

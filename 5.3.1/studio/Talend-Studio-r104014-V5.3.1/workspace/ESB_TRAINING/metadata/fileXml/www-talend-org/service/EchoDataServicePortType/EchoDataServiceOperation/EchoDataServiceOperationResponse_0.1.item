@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:XmlFileConnection xmi:id="_XuJ5sp8fEeO5Ed52bvKQKA" name="EchoDataServiceOperationResponse" dataPackage="_XuJ5tp8fEeO5Ed52bvKQKA" XmlFilePath="tempXSDFile8631901962882521962.zip" inputModel="false" fileContent="504B03041400080808006B765A440000000000000000000000002200000074656D7058534446696C65363035323834343731383138383537343331332E787364BD52C94EC33010BD23F10F913F202E708B1A4E85138B44397035CE34B1E4AD9E31097F8FB33482A2A81212F56DE62D336FE475875581B20123B2CE688B456A94AC21F205E76DDBE6ED4DEE42CDAF57AB2BFEF6F8B01DB86C22A3137E668F369827A8EF0FB2162BCDFB8A1F2464F1873F090DB61AC808E1434998A9BDF8B43BCB045150EF91E0DE05B3819D889A4A16ED3E0AAD760A2A9681060396960924420DF4240CA017124EAE787B7991A5B7EEEF37996736A94B76271BB71124B623F5D94310A49C7D817D04A48372564B67BC86EEF5D3C3376886B19759798C2D0C573645494E251BB4E92EB666FCD8972F188FC0EF85C6FE34E92FC9D13B8BF0BFD15DA473649F0C86DF98CA2F504B0708468D8F5F0A01000041030000504B010214001400080808006B765A44468D8F5F0A0100004103000022000000000000000000000000000000000074656D7058534446696C65363035323834343731383138383537343331332E787364504B05060000000001000100500000005A0100000000">
+    <root xmi:id="_XuJ5s58fEeO5Ed52bvKQKA" XMLPath="/tns:EchoDataServiceOperationResponse" Attribute="main" Order="1" Type="id_String"/>
+    <root xmi:id="_XuJ5tJ8fEeO5Ed52bvKQKA" XMLPath="tns" DefaultValue="http://www.talend.org/service/" Attribute="ns" Order="2" Type="id_String"/>
+    <loop xmi:id="_XuJ5tZ8fEeO5Ed52bvKQKA" XMLPath="/tns:EchoDataServiceOperationResponse/out" RelatedColumn="out" Attribute="branch" Order="3" Type="id_String"/>
+  </TalendMetadata:XmlFileConnection>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_XuJ5tp8fEeO5Ed52bvKQKA" name="default" dataManager="_XuJ5sp8fEeO5Ed52bvKQKA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_XuJ5t58fEeO5Ed52bvKQKA" name="metadata" id="_XuJ5sJ8fEeO5Ed52bvKQKA" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_XuJ5uJ8fEeO5Ed52bvKQKA" name="out" label="out" talendType="id_String"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

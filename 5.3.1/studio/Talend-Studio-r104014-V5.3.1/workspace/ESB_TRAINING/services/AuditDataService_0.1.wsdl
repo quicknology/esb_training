@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="AuditDataService"
+		xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:tns="http://www.talend.org/service/"
+		targetNamespace="http://www.talend.org/service/">
+
+	<wsdl:types>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.talend.org/service/">
+			<xsd:element name="AuditRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="OrderID" type="xsd:string"></xsd:element>
+						<xsd:element name="FlowStep" type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="AuditResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="AuditID" type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="AuditRequest">
+		<wsdl:part name="parameters" element="tns:AuditRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="AuditResponse">
+		<wsdl:part name="parameters" element="tns:AuditResponse"></wsdl:part>
+	</wsdl:message>
+
+	<wsdl:portType name="AuditDataServicePortType">
+		<wsdl:operation name="Audit">
+			<wsdl:input message="tns:AuditRequest"></wsdl:input>
+			<wsdl:output message="tns:AuditResponse"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="AuditDataServiceBinding" type="tns:AuditDataServicePortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="Audit">
+			<soap:operation soapAction="http://www.talend.org/service/Audit" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="AuditDataService">
+		<wsdl:port name="AuditDataServicePort" binding="tns:AuditDataServiceBinding">
+			<soap:address location="http://localhost:8092/services/AuditDataService" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

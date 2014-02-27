@@ -1,0 +1,6 @@
+org\talend\service\package-info.class
+org\talend\service\ObjectFactory.class
+org\talend\service\AuditDataServicePortType.class
+org\talend\service\AuditDataService.class
+org\talend\service\AuditResponse.class
+org\talend\service\AuditRequest.class

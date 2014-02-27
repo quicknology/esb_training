@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.talend.service</groupId>
+	<version>1.0.0-SNAPSHOT</version>
+	<artifactId>esb.training.sei</artifactId>
+	<name>ESB :: TRAINING :: Service Interface</name>
+	<packaging>bundle</packaging>
+
+	<properties>
+		<cxf-version>2.5.0</cxf-version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+	</properties>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/*</include>
+				</includes>
+			</resource>
+		</resources>
+
+		<plugins>
+		
+		<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<extensions>true</extensions>
+				<version>2.2.0</version>
+				<configuration>
+					<manifestLocation>META-INF</manifestLocation>
+					<instructions>
+						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+						<Bundle-ManifestVersion>2</Bundle-ManifestVersion>
+						<Bundle-Version>1.0.0</Bundle-Version>
+						<Bundle-Name>${project.artifactId}</Bundle-Name>
+						<Import-Package>
+							META-INF.cxf,
+							META-INF.cxf.camel,
+							META-INF.cxf.osgi,
+							org.apache.cxf.*,
+							javax.xml.ws,
+							javax.xml.bind.annotation,
+							javax.xml.namespace,
+							*
+					    </Import-Package>
+					    <Export-Package>
+					    	org.talend.service.*;version=${project.version}
+					    </Export-Package>
+						<Require-Bundle>org.apache.cxf.bundle</Require-Bundle>
+					</instructions>
+				</configuration>
+			</plugin>
+				
+			<plugin>
+				<groupId>org.apache.cxf</groupId>
+				<artifactId>cxf-codegen-plugin</artifactId>
+				<version>${cxf-version}</version>
+				<executions>
+					<execution>
+						<id>generate-sources</id>
+						<phase>generate-sources</phase>
+						<configuration>
+							<wsdlOptions>
+								<wsdlOption>
+									<wsdl>${basedir}/src/main/resources/WEB-INF/WSDL/AuditDataService.wsdl</wsdl>
+								</wsdlOption>
+							</wsdlOptions>
+						</configuration>
+						<goals>
+							<goal>wsdl2java</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
+

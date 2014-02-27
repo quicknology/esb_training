@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+		targetNamespace="http://www.talend.org/order"
+		xmlns:tns="http://www.talend.org/order" 
+		elementFormDefault="unqualified">
+
+	<complexType name="Order_Type">
+		<sequence>
+			<element name="OrderId" 				type="string" />
+			<element name="OrderDescription" 		type="string" />
+			<element name="OrderDate"				type="date" />
+			<element name="OrderAmount" 			type="float" />
+			<element name="OrderCountry" 			type="string" />
+			<element name="OrderCurrency" 			type="string" />
+		</sequence>
+	</complexType>
+
+	<element name="Order" type="tns:Order_Type" />
+</schema>

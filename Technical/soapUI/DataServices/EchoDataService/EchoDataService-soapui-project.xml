@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project name="EchoDataService" soapui-version="3.6.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="EchoDataServiceBinding" type="wsdl" bindingName="{http://www.talend.org/service/}EchoDataServiceBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8090/services/EchoDataService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8090/services/EchoDataService?wsdl"><con:part><con:url>http://localhost:8090/services/EchoDataService?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="EchoDataService" targetNamespace="http://www.talend.org/service/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.talend.org/service/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.talend.org/service/">
+      <xsd:element name="EchoDataServiceOperationRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="EchoDataServiceOperationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="out" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="EchoDataServiceOperationRequest">
+    <wsdl:part element="tns:EchoDataServiceOperationRequest" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="EchoDataServiceOperationResponse">
+    <wsdl:part element="tns:EchoDataServiceOperationResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="EchoDataServicePortType">
+    <wsdl:operation name="EchoDataServiceOperation">
+      <wsdl:input message="tns:EchoDataServiceOperationRequest"></wsdl:input>
+      <wsdl:output message="tns:EchoDataServiceOperationResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EchoDataServiceBinding" type="tns:EchoDataServicePortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="EchoDataServiceOperation">
+      <soap:operation soapAction="http://www.talend.org/service/EchoDataServiceOperation"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EchoDataService">
+    <wsdl:port binding="tns:EchoDataServiceBinding" name="EchoDataServicePort">
+      <soap:address location="http://localhost:8090/services/EchoDataService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8090/services/EchoDataService</con:endpoint></con:endpoints><con:operation isOneWay="false" action="http://www.talend.org/service/EchoDataServiceOperation" name="EchoDataServiceOperation" bindingOperationName="EchoDataServiceOperation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8090/services/EchoDataService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://www.talend.org/service/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:EchoDataServiceOperationRequest>
+         <in>?</in>
+      </ser:EchoDataServiceOperationRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.talend.org/service/EchoDataServiceOperation"/></con:call></con:operation></con:interface><con:testSuite name="EchoDataServiceBinding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="EchoDataServiceOperation TestCase" searchProperties="true"><con:settings/><con:testStep type="request" name="EchoDataServiceOperation"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EchoDataServiceBinding</con:interface><con:operation>EchoDataServiceOperation</con:operation><con:request name="EchoDataServiceOperation"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8090/services/EchoDataService</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://www.talend.org/service/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:EchoDataServiceOperationRequest>
+         <in>?</in>
+      </ser:EchoDataServiceOperationRequest>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig action="http://www.talend.org/service/EchoDataServiceOperation"/></con:request></con:config></con:testStep><con:loadTest name="LoadTest 1"><con:settings/><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/></con:soapui-project>

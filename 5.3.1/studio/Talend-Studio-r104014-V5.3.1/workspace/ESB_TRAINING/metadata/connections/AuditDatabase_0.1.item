@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <TalendMetadata:DatabaseConnection xmi:id="_77UfYJ8zEeO5Ed52bvKQKA" name="AuditDatabase" id="_tofS8J8zEeO5Ed52bvKQKA" label="AuditDatabase" dataPackage="_LZQNAJ80EeO5Ed52bvKQKA" DatabaseType="MySQL" DriverClass="org.gjt.mm.mysql.Driver" URL="jdbc:mysql://localhost:3306/audit?noDatetimeStringSync=true" dbVersionString="MYSQL_5" Port="3306" Username="root" Password="YdTnhbqBAdo=" ServerName="localhost" DatasourceName="" FileFieldName="" SID="audit" SqlSynthax="SQL Syntax" DbmsId="mysql_id" ProductId="MYSQL" AdditionalParams="noDatetimeStringSync=true" StandardSQL="true" SQLMode="false" UiSchema="">
+    <taggedValue xmi:id="_77UfYZ8zEeO5Ed52bvKQKA" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_78XBMJ8zEeO5Ed52bvKQKA" tag="package filter" value=""/>
+    <taggedValue xmi:id="_78gLIJ8zEeO5Ed52bvKQKA" tag="Status" value=""/>
+    <taggedValue xmi:id="_78gLIZ8zEeO5Ed52bvKQKA" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_78gLIp8zEeO5Ed52bvKQKA" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_78gLI58zEeO5Ed52bvKQKA" tag="Description" value=""/>
+    <taggedValue xmi:id="_78gLJJ8zEeO5Ed52bvKQKA" tag="Author" value=""/>
+    <taggedValue xmi:id="_78gLJZ8zEeO5Ed52bvKQKA" tag="otherParameter"/>
+    <taggedValue xmi:id="_78gLJp8zEeO5Ed52bvKQKA" tag="DB ProductName" value="MySQL"/>
+    <taggedValue xmi:id="_78gLJ58zEeO5Ed52bvKQKA" tag="DB ProductVersion" value="5.5.27"/>
+    <taggedValue xmi:id="_78gLKJ8zEeO5Ed52bvKQKA" tag="DB IdentifierQuoteString" value="`"/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_LZQNAJ80EeO5Ed52bvKQKA" name="audit" dataManager="_77UfYJ8zEeO5Ed52bvKQKA">
+    <ownedElement xsi:type="relational:TdTable" xmi:id="_LZQNAZ80EeO5Ed52bvKQKA" name="audit_trail" id="_Bz2ZAJ80EeO5Ed52bvKQKA" label="audit_trail" tableType="TABLE">
+      <taggedValue xmi:id="_LZQNAp80EeO5Ed52bvKQKA" tag="Comment" value=""/>
+      <feature xsi:type="relational:TdColumn" xmi:id="_LZQNA580EeO5Ed52bvKQKA" name="audit_id" label="audit_id" length="20" sourceType="VARCHAR" talendType="id_String" nullable="false">
+        <taggedValue xmi:id="_LZQNBJ80EeO5Ed52bvKQKA" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_LZQNBZ80EeO5Ed52bvKQKA" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_LZQNBp80EeO5Ed52bvKQKA" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_LZQNB580EeO5Ed52bvKQKA" name="audit_step" label="audit_step" length="30" sourceType="VARCHAR" talendType="id_String" nullable="false">
+        <taggedValue xmi:id="_LZQNCJ80EeO5Ed52bvKQKA" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_LZQNCZ80EeO5Ed52bvKQKA" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_LZQNCp80EeO5Ed52bvKQKA" name="VARCHAR" numericPrecisionRadix="10" javaDataType="12"/>
+      </feature>
+      <feature xsi:type="relational:TdColumn" xmi:id="_LZQNC580EeO5Ed52bvKQKA" name="audit_timestamp" label="audit_timestamp" length="19" sourceType="TIMESTAMP" talendType="id_Date" nullable="false" pattern="&quot;dd-MM-yyyy&quot;">
+        <taggedValue xmi:id="_LZQNDJ80EeO5Ed52bvKQKA" tag="Comment" value=""/>
+        <initialValue xsi:type="relational:TdExpression" xmi:id="_LZQNDZ80EeO5Ed52bvKQKA" body="CURRENT_TIMESTAMP" language="COLUMN_DEF"/>
+        <sqlDataType xmi:id="_LZQNDp80EeO5Ed52bvKQKA" name="TIMESTAMP" numericPrecisionRadix="10" javaDataType="93"/>
+      </feature>
+    </ownedElement>
+  </orgomg.cwm.resource.relational:Catalog>
+</xmi:XMI>

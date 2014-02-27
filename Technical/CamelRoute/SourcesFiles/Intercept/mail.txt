@@ -1,0 +1,15 @@
+Talend v5
+
+The Talend v5 platform is a holistic integration solution that enables IT organizations
+to converge traditionally disparate integration efforts and practices through a common
+set of products, tools and best practices.
+
+Built on the same open core model, all Talend products contribute to the open source 
+community and leverage popular open source projects. Designed and developed using the
+same methodology and philosophy, Talend’s enterprise-ready open source solutions address
+all the integration needs of organizations, regardless of their size or industry.
+
+The Talend Unified Platform provides a common foundation for the products to be used
+individually or in concert depending on the needs of the organization.
+
+Click on a product below for more information, or review What's New in Talend v5

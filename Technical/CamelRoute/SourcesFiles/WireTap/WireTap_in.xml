@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<people>
+	<person>
+		<firstName>Pierre</firstName>
+		<lastName>Dubois</lastName>
+		<city>Paris</city>
+	</person>
+	<person>
+		<firstName>Nicolas</firstName>
+		<lastName>Yang</lastName>
+		<city>Beijing</city>
+	</person>
+	<person>
+		<firstName>Ellen</firstName>
+		<lastName>Ripley</lastName>
+		<city>Washington</city>
+	</person>
+</people>
